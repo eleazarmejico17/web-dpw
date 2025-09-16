@@ -1,0 +1,50 @@
+.animate-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .animate-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .animate-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .animate-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .animate-fade {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+  }
+  
+  .animate-fade.visible {
+    opacity: 1;
+  }
+  .animate-up {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .animate-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (max-width: 768px) {
+    .animate-left,
+    .animate-right,
+    .animate-up,
+    .animate-fade {
+        transform: none; /* Resetea la animación */
+        opacity: 1; /* Asegúrate de que el contenido sea visible */
+        transition: none; /* Sin transiciones */
+    }
+}
